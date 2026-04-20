@@ -1,5 +1,5 @@
 import productsModel from '../../model/productModel';
-import './products.css';
+import './products-clean.css';
 import DeleteProductButton from './DeleteProductButton';
 export default async function ProductsPage() {
 
@@ -10,14 +10,18 @@ export default async function ProductsPage() {
         {products.map(product => (
           <article className="item" key={product.id}>
             <div className="text">
-              <h3>
-                {product.id}: {product.name}
-              </h3>
+              <h3>{product.id}: {product.name}</h3>
               <p>${product.price}</p>
-              <p>Type: <a href={`/products/type/${product.type}`}> {product.type}</a></p>
+              <p>
+                Type: <a href={`/products/type/${product.type}`}>{product.type}</a>
+              </p>
               <p>Description: {product.description}</p>
-              <p className="detail-button"><a href={`/products/${product.id}`}>View</a></p>
-              <DeleteProductButton productId={product.id} />
+              <div className="item-actions">
+                <a className="detail-button" href={`/products/${product.id}`}>
+                  View
+                </a>
+                <DeleteProductButton productId={product.id} />
+              </div>
             </div>
           </article>
         ))}

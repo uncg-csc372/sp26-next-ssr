@@ -1,5 +1,5 @@
 import productModel from '../../../model/productModel';
-import '../products.css';
+import '../products-clean.css';
 import DeleteProductButton from '../../products/DeleteProductButton';
 
 export default async function ProductDetailPage({ params }) {
@@ -10,7 +10,6 @@ export default async function ProductDetailPage({ params }) {
   return (
     <div>
       <h2 className="text-center">Product Details</h2>
-      <a href="/add-product" className="btn btn-outline-primary">Add Product</a>
       <div id="details-container">
         <div className="card-holder">
           <h3>{product.name}</h3>

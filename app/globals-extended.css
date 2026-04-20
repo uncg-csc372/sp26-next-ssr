@@ -1,0 +1,140 @@
+/* ============================================
+   GLOBAL STYLES & DESIGN TOKENS
+   ============================================ */
+
+:root {
+  --color-primary: #007bff;
+  --color-primary-hover: #0056b3;
+  --color-danger: #dc3545;
+  --color-danger-hover: #c82333;
+  --color-secondary: #6c757d;
+  --color-secondary-hover: #5a6268;
+  --color-info: #9dc6f1;
+  --color-text: #333;
+  --color-border: #ddd;
+  --color-border-light: #ccc;
+  --color-bg-nav: #d3d3d3;
+  --color-bg-card: white;
+  --color-link: blue;
+
+  --shadow-sm: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+  --radius: 5px;
+  --radius-lg: 10px;
+
+  --spacing-xs: 8px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f7fa;
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease;
+}
+
+.btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.btn-danger:hover {
+  background-color: var(--color-danger-hover);
+}
+
+.mt-3 {
+  margin-top: 20px;
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+  font-size: 14px;
+}
+
+.form-control {
+  padding: 12px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s;
+  background-color: #f8f9fa;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+  background-color: white;
+}
+
+.form-control textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
