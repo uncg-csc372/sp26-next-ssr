@@ -19,6 +19,7 @@
 DATABASE_URL='NEON STRING'
 clientID='clientIDFromGoogleCloud'
 clientSecret='clientSecretFromGoogleCloud'
+AUTH_SECRET='our_secret_key_for_next_auth-config'
 ```
 - Run `npm install`
 - Run `npm run dev`
