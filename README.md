@@ -8,5 +8,5 @@
 DATABASE_URL='NEON STRING'
 ```
 - Run `npm install`
-- Run `node server.js`
+- Run `npm run dev`
 - Access the app at http://localhost:3000/products
