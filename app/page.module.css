@@ -1,13 +1,13 @@
 .page {
-  --background: #fafafa;
-  --foreground: #fff;
+  --background: var(--color-bg-light);
+  --foreground: var(--color-bg-card);
 
-  --text-primary: #000;
-  --text-secondary: #666;
+  --text-primary: var(--color-text);
+  --text-secondary: var(--color-text-secondary);
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
+  --button-primary-hover: var(--color-primary-hover);
+  --button-secondary-hover: var(--color-accent);
+  --button-secondary-border: var(--color-border-light);
 
   display: flex;
   flex: 1;
@@ -85,13 +85,19 @@
 }
 
 a.primary {
-  background: var(--text-primary);
-  color: var(--background);
+  background: var(--color-primary);
+  color: white;
   gap: 8px;
 }
 
 a.secondary {
   border-color: var(--button-secondary-border);
+  color: var(--color-accent);
+}
+
+a.secondary:hover {
+  background-color: var(--color-accent);
+  color: white;
 }
 
 /* Enable hover only on non-touch devices */

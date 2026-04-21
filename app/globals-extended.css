@@ -3,31 +3,38 @@
    ============================================ */
 
 :root {
-  --color-primary: #007bff;
-  --color-primary-hover: #0056b3;
-  --color-danger: #dc3545;
-  --color-danger-hover: #c82333;
-  --color-secondary: #6c757d;
-  --color-secondary-hover: #5a6268;
-  --color-info: #9dc6f1;
-  --color-text: #333;
-  --color-border: #ddd;
-  --color-border-light: #ccc;
-  --color-bg-nav: #d3d3d3;
-  --color-bg-card: white;
-  --color-link: blue;
+  /* Complementary Color Palette */
+  --color-primary: #1a3a52;          /* Navy Blue */
+  --color-primary-hover: #0f2438;    /* Darker Navy */
+  --color-accent: #2e8b9e;           /* Teal - complements Navy */
+  --color-accent-hover: #1f5d6f;     /* Darker Teal */
+  --color-secondary: #5a7d8f;        /* Slate Blue-Gray */
+  --color-secondary-hover: #3f5a70;  /* Darker Slate */
+  --color-danger: #c55a49;           /* Warm Rust Red */
+  --color-danger-hover: #a84639;     /* Darker Rust */
+  --color-success: #4a9b6f;          /* Muted Green */
+  --color-success-hover: #356b50;    /* Darker Green */
 
-  --shadow-sm: 2px 2px 6px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
-  --shadow-lg: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  --color-text: #1f2937;             /* Dark Gray for text */
+  --color-text-secondary: #6b7280;   /* Medium Gray */
+  --color-border: #d1d5db;           /* Light Border Gray */
+  --color-border-light: #e5e7eb;     /* Lighter Border */
+  --color-bg-nav: #1a3a52;           /* Navy for nav */
+  --color-bg-card: #ffffff;          /* White cards */
+  --color-bg-light: #f9fafb;         /* Off-white backgrounds */
+  --color-link: #2e8b9e;             /* Teal for links */
 
-  --radius: 5px;
-  --radius-lg: 10px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  --radius: 6px;
+  --radius-lg: 12px;
 
   --spacing-xs: 8px;
-  --spacing-sm: 10px;
-  --spacing-md: 20px;
-  --spacing-lg: 40px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
 }
 
 * {
@@ -42,7 +49,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f5f7fa;
+  background-color: var(--color-bg-light);
+  color: var(--color-text);
+  line-height: 1.5;
 }
 
 /* ============================================
@@ -72,13 +81,23 @@ button {
   background-color: var(--color-primary-hover);
 }
 
+.btn-primary:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 .btn-secondary {
-  background-color: var(--color-secondary);
+  background-color: var(--color-accent);
   color: white;
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-secondary-hover);
+  background-color: var(--color-accent-hover);
+}
+
+.btn-secondary:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .btn-danger {
@@ -89,6 +108,11 @@ button {
 
 .btn-danger:hover {
   background-color: var(--color-danger-hover);
+}
+
+.btn-danger:focus {
+  outline: 2px solid var(--color-danger-hover);
+  outline-offset: 2px;
 }
 
 .mt-3 {
@@ -118,15 +142,20 @@ button {
   border-radius: var(--radius);
   font-size: 14px;
   font-family: inherit;
-  transition: all 0.3s;
-  background-color: #f8f9fa;
+  transition: all 0.2s ease;
+  background-color: var(--color-bg-card);
+  color: var(--color-text);
+}
+
+.form-control:hover {
+  border-color: var(--color-accent);
 }
 
 .form-control:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
-  background-color: white;
+  box-shadow: 0 0 0 3px rgba(26, 58, 82, 0.1);
+  background-color: var(--color-bg-card);
 }
 
 .form-control textarea {

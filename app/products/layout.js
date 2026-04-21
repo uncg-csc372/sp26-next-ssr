@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import './products-clean.css';
+import './index.css';
 import AddProductComponent from './AddProductComponent';
 
 export default function ProductsLayout({ children }) {

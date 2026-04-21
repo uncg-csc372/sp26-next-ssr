@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { addProductAPI } from '../services/productService';
-import './products-clean.css';
+import './index.css';
 
 export default function AddProductComponent({ onClose }) {
   const [name, setName] = useState('');

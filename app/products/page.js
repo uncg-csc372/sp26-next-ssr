@@ -1,5 +1,5 @@
 import productsModel from '../../model/productModel';
-import './products-clean.css';
+import './index.css';
 import DeleteProductButton from './DeleteProductButton';
 export default async function ProductsPage() {
 
